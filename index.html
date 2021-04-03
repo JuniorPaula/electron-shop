@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electron E-commerce</title>
+
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- Font Open Sans -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <!-- Header -->
+   <header class="header">
+       <div class="header_top">
+           <div class="header_top_container">
+               <div class="store_info_container">
+                   <span><i class="fas fa-phone"></i> (47)9999-8888</span>
+                   <span><i class="far fa-envelope"></i> Contato@electron.com</span>
+                   <span><i class="fa fa-map-marker-alt"></i> Rua Irlanda, 3054</span>
+               </div>
+               <div class="header_user_top_menu">
+                   <span><i class="fas fa-dollar-sign"></i><a href="#">BRL</a></span>
+                   <span><i class="fas fa-user"></i> Minha conta</span>
+               </div>
+           </div>
+       </div>
+       <div class="main_header">
+           <div class="main_header_container">
+               <a href="#" id="brand">Electron <i class="fas fa-bolt"></i></a>
+               <form action="" id="search_form">
+                   <input type="text" id="search" placeholder="Busque aqui">
+                   <input type="submit" class="btn btn_half" value="Pesquisar">
+               </form>
+               <div class="header_actions_menu">
+                    <div class="whishlist_container">
+                        <span class="qtd">0</span>
+                        <i class="far fa-heart"></i>
+                        <a href="#">Favoritos</a>
+                    </div>
+                    <div class="header_cart_container">
+                        <span class="qtd">0</span>
+                        <i class="fas fa-shopping-cart"></i>
+                        <a href="#">Carrinho</a>
+                    </div>
+               </div>
+           </div>
+       </div>
+       <div class="header_bottom">
+           <nav>
+               <ul>
+                   <li>
+                       <a href="#">Home</a>
+                   </li>
+                   <li>
+                        <a href="#">Promoções</a>
+                    </li>
+                    <li>
+                        <a href="#">Notebooks</a>
+                    </li>
+                    <li>
+                        <a href="#">Celulares</a>
+                    </li>
+                    <li>
+                        <a href="#">Câmeras</a>
+                    </li>
+                    <li>
+                        <a href="#">Acessórios</a>
+                    </li>
+               </ul>
+           </nav>
+       </div>
+   </header>
+   <!-- Banners -->
+   <div class="banners">
+       <div class="banner" id="banner-1">
+           <div class="banner_cover"></div>
+           <div class="banner_content">
+               <h2>Promoções de Notebooks</h2>
+               <a href="#">Ver Mais <i class="fas fa-arrow-circle-right"></i></a>
+           </div>
+       </div>
+       <div class="banner" id="banner-2">
+        <div class="banner_cover"></div>
+        <div class="banner_content">
+            <h2>Lançamentos de acessórios</h2>
+            <a href="#">Ver Mais <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <div class="banner" id="banner-3">
+        <div class="banner_cover"></div>
+        <div class="banner_content">
+            <h2>Câmeras de alta qualidade</h2>
+            <a href="#">Ver Mais <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+   </div>
+   <!-- Products -->
+   <div class="products_grid">
+       <h2>Produtos Novos</h2>
+       <div class="products_grid_container">
+           <div class="products_grid_card">
+               <span class="label new">New</span>
+               <img src="img/prod-1.jpg" alt="Produto 1">
+               <p class="category">Categoria</p>
+               <h3 class="product_name">Nome do Produto</h3>
+               <p class="product_price">R$ 1124,99</p>
+               <div class="rating_box">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+               </div>
+               <button class="btn">Comprar</button>
+           </div>
+           <div class="products_grid_card">
+            <span class="label new">New</span>
+            <img src="img/prod-2.jpg" alt="Produto 2">
+            <p class="category">Categoria</p>
+            <h3 class="product_name">Nome do Produto</h3>
+            <p class="product_price">R$ 1159,99</p>
+            <div class="rating_box">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <button class="btn">Comprar</button>
+        </div>
+        <div class="products_grid_card">
+            <span class="label new">New</span>
+            <img src="img/prod-3.jpg" alt="Produto 3">
+            <p class="category">Categoria</p>
+            <h3 class="product_name">Nome do Produto</h3>
+            <p class="product_price">R$ 1199,99</p>
+            <div class="rating_box">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <button class="btn">Comprar</button>
+        </div>
+        <div class="products_grid_card">
+            <span class="label new">New</span>
+            <img src="img/prod-4.jpg" alt="Produto 4">
+            <p class="category">Categoria</p>
+            <h3 class="product_name">Nome do Produto</h3>
+            <p class="product_price">R$ 1250,00</p>
+            <div class="rating_box">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <button class="btn">Comprar</button>
+        </div>
+       </div>
+   </div>
+   <!-- Deal -->
+   <div class="deal_container">
+       <div class="deal_container_content">
+          <div class="deal_container_content_timer">
+            <div class="deal_container_timer">
+                <span class="deal_container_timer_time">02</span>
+                <span class="deal_container_timer_word">Dias</span>
+            </div>
+            <div class="deal_container_timer">
+                 <span class="deal_container_timer_time">12</span>
+                 <span class="deal_container_timer_word">Horas</span>
+             </div>
+             <div class="deal_container_timer">
+                 <span class="deal_container_timer_time">25</span>
+                 <span class="deal_container_timer_word">Minutos</span>
+             </div>
+             <div class="deal_container_timer">
+                 <span class="deal_container_timer_time">33</span>
+                 <span class="deal_container_timer_word">Segundos</span>
+             </div>
+          </div>
+          <h2 class="deal_container_content_title">Promoção de Fone Gamer</h2>
+          <p class="deal_container_content_subtitle">Toda a linha de gamer com 50% de desconto</p>
+          <button class="btn">Comprar Agora</button>
+       </div>
+   </div>
+    <!-- Mais vendidos  -->
+    <div class="products_grid">
+        <h2>Mais Vendidos</h2>
+        <div class="products_grid_container">
+            <div class="products_grid_card">
+                <span class="label hot">Hot</span>
+                <img src="img/prod-5.jpg" alt="Produto 5">
+                <p class="category">Categoria</p>
+                <h3 class="product_name">Nome do Produto</h3>
+                <p class="product_price">R$ 1124,99</p>
+                <div class="rating_box">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <button class="btn">Comprar</button>
+            </div>
+            <div class="products_grid_card">
+                <span class="label hot">Hot</span>
+                <img src="img/prod-6.jpg" alt="Produto 6">
+                <p class="category">Categoria</p>
+                <h3 class="product_name">Nome do Produto</h3>
+                <p class="product_price">R$ 1159,99</p>
+                <div class="rating_box">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="btn">Comprar</button>
+            </div>
+            <div class="products_grid_card">
+                <span class="label hot">Hot</span>
+                <img src="img/prod-7.jpg" alt="Produto 7">
+                <p class="category">Categoria</p>
+                <h3 class="product_name">Nome do Produto</h3>
+                <p class="product_price">R$ 1199,99</p>
+                <div class="rating_box">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <button class="btn">Comprar</button>
+            </div>
+            <div class="products_grid_card">
+                <span class="label hot">Hot</span>
+                <img src="img/prod-8.jpg" alt="Produto 8">
+                <p class="category">Categoria</p>
+                <h3 class="product_name">Nome do Produto</h3>
+                <p class="product_price">R$ 1250,00</p>
+                <div class="rating_box">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="btn">Comprar</button>
+            </div>
+        </div>
+    </div>
+    <!-- Newsletter -->
+    <div class="newslatter_container">
+        <h2>Assine a nossa <span>Newsletter</span></h2>
+        <form action="">
+            <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+            <input type="submit" class="btn btn_half" value="Assinar">
+        </form>
+        <div class="social_media">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-pinterest-p"></i>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="footer_top_about">
+                <h3>Sobre Nós</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore consequatur inventore in blanditiis non aperiam iste quaerat atque sapiente tempora odit incidunt doloribus, eveniet assumenda, facilis architecto fugit quidem culpa.</p>
+                <p><i class="fas fa-location-arrow"></i><a href="#">Rua Irlanda, 3054</a></p>
+                <p><i class="fas fa-phone"></i><a href="#">(47)9999-8888</a></p>
+                <p><i class="far fa-envelope"></i><a href="#">Contato@electron.com</a></p>
+            </div>
+            <div class="footer_top_categories">
+                <h3>Categorias</h3>
+                <ul>
+                    <li>
+                        <a href="#">Promoções</a>
+                    </li>
+                    <li>
+                        <a href="#">Headsers</a>
+                    </li>
+                    <li>
+                        <a href="#">PC Gamer</a>
+                    </li>
+                    <li>
+                        <a href="#">Câmeras</a>
+                    </li>
+                    <li>
+                        <a href="#">Mouse e Teclado</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_top_information">
+                <h3>Informações</h3>
+                <ul>
+                    <li>
+                        <a href="#">Sobre nós</a>
+                    </li>
+                    <li>
+                        <a href="#">Entre em contato</a>
+                    </li>
+                    <li>
+                        <a href="#">Política de privacidade</a>
+                    </li>
+                    <li>
+                        <a href="#">Pedidos e devoluções</a>
+                    </li>
+                    <li>
+                        <a href="#">Termo de condições</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_top_menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li>
+                        <a href="#">Minha conta</a>
+                    </li>
+                    <li>
+                        <a href="#">Carrinho</a>
+                    </li>
+                    <li>
+                        <a href="#">Lista de desejos</a>
+                    </li>
+                    <li>
+                        <a href="#">Rasterar pedido</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="footer_bottom_payments">
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-diners-club"></i>
+                <i class="fab fa-cc-amazon-pay"></i>
+                <i class="fab fa-cc-apple-pay"></i>
+            </div>
+            <p>copyright &copy; 2021 - Electron</p>
+        </div>
+    </footer>
+</body>
+</html>

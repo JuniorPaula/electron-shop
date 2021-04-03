@@ -1,0 +1,62 @@
+@use '../1-base/_variables'
+@use '../1-base/_base-mixin'
+@use 'layout-mixin'
+
+.footer 
+    background-color: variables.$bg-color 
+    padding: 3rem 0 
+
+    @include base-mixin.mobile 
+        padding: 3rem 
+
+    a, p 
+        color: variables.$gray-text-color 
+
+    li, p 
+        margin-bottom: 1rem 
+
+        a 
+            &:hover 
+                color: variables.$primary-color
+
+    i 
+        margin-right: .3rem
+
+    h3 
+        color: variables.$light-color 
+        text-transform: uppercase
+        font-size: 1.75rem 
+        margin-bottom: 1.5rem
+
+    &_top 
+        @include layout-mixin.center-content 
+        padding-bottom: 3rem
+
+        @include base-mixin.mobile 
+            flex-direction: column
+
+        &_about, &_categories, &_information, &_menu
+            max-width: 25%
+
+            @include base-mixin.mobile
+                max-width: 100%
+                margin-bottom: 1rem
+
+    &_bottom 
+        @include layout-mixin.center-content
+        flex-direction: column 
+        justify-content: center 
+        align-items: center
+
+        &_payments 
+            margin-bottom: 2rem 
+
+            i 
+                color: variables.$dark-color 
+                cursor: pointer
+                font-size: 3rem 
+                margin: 5px 
+                transition: .4s 
+
+                &:hover 
+                    color: variables.$primary-color

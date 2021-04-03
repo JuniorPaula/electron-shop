@@ -1,0 +1,23 @@
+@use '../1-base/_base-mixin'
+@use 'layout-mixin'
+
+.products_grid
+    @include layout-mixin.center-content 
+    flex-direction: column
+    padding: 2rem 0 
+
+    h2 
+        font-size: 2rem 
+        text-transform: uppercase 
+
+        @include base-mixin.mobile
+            text-align: center 
+
+    &_container 
+        display: flex 
+        justify-content: space-between 
+        padding: 2rem 0 
+
+        @include base-mixin.mobile 
+            flex-direction: column 
+            align-items: center
